@@ -18,6 +18,8 @@ int bob = new Random().Next(100, 999);
 Console.Write(bob + " second number ");
 Pipka(bob);
 
+
+
 //Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
 /*
 645 -> 5
@@ -45,6 +47,8 @@ int magic = new Random().Next(10, 9999);
 Console.Write(magic);
 Puca(magic);
 
+
+
 //Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
 /*
 6 -> да
@@ -52,16 +56,25 @@ Puca(magic);
 1 -> нет
 */
 
+
 void Week(int day)
 {
-    if(day < 6)
+    if(day > 7 || day < 1) 
     {
-        Console.WriteLine("Today is a working day");
-    }
+       Console.WriteLine("NEVERNAYA DATA BLYAT");
+    } 
     else
     {
-        Console.WriteLine("Today is a day off");
+       if(day > 5)
+        {
+            Console.WriteLine("Today is a day off");
+        }
+        else
+        {
+            Console.WriteLine("Working day");
+        } 
     }
+    
 }
 
 Console.WriteLine("Write number day");
