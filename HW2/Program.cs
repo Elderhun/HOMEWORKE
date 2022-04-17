@@ -61,7 +61,7 @@ void Week(int day)
 {
     if(day > 7 || day < 1) 
     {
-       Console.WriteLine("NEVERNAYA DATA BLYAT");
+       Console.WriteLine("Wrong day of the week");
     } 
     else
     {
@@ -78,6 +78,7 @@ void Week(int day)
 }
 
 Console.WriteLine("Write number day");
-int day = Convert.ToInt32(Console.ReadLine());
-Week(day);
+int biba = Convert.ToInt32(Console.ReadLine());
+Week(biba);
+
 
