@@ -67,7 +67,7 @@ Console.WriteLine(EvenNum(dobi));
 //Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
 /*
 [3 7 22 2 78] -> 76
-*//*
+*/
 
 
 static void MaxMin(int[] massiv)
@@ -86,6 +86,7 @@ static void MaxMin(int[] massiv)
 		}
 	}
 	Console.WriteLine("Максимальное число " + maxNumMass + " минимальное число " + minNumMass);
+	Console.WriteLine(maxNumMass - minNumMass + " Разница между максимальным и минимальным числом");
 }
 
 
@@ -94,6 +95,6 @@ var mass = string.Join(" ", masik);
 Console.WriteLine(mass + " массивчек");
 MaxMin(masik);
 
-*/
+
 
 
