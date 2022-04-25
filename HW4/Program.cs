@@ -70,7 +70,7 @@ Console.WriteLine(EvenNum(dobi));
 */
 
 
-static void MaxMin(int[] massiv)
+void MaxMin(int[] massiv)
 {
 	int maxNumMass = massiv[0];
 	int minNumMass = massiv[0];
