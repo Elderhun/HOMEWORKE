@@ -11,6 +11,21 @@ int[] RndMass()                            //Туто рандомно дела�
 	}
 	return mass;
 }
+double[] RndMassVesh()                     
+{
+	int size = new Random().Next(2, 10);
+	double[] mass = new double[size];
+	Random rand = new Random();
+    double number;
+
+	for (int i = 0; i < size; i ++)
+	{
+        number = rand.NextDouble();
+		mass[i] = Math.Round(number, 2);
+	}
+	return mass;
+}
+
 //
 //Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
 /*
@@ -67,13 +82,13 @@ Console.WriteLine(EvenNum(dobi));
 //Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
 /*
 [3 7 22 2 78] -> 76
-*//*
+*/
 
 
-void MaxMin(int[] massiv)
+void MaxMin(double[] massiv)
 {
-	int maxNumMass = massiv[0];
-	int minNumMass = massiv[0];
+	double maxNumMass = massiv[0];
+	double minNumMass = massiv[0];
 	for(int i = 1; i < massiv.Length; i++)
 	{	
 		if(massiv[i] > maxNumMass)
@@ -86,16 +101,17 @@ void MaxMin(int[] massiv)
 		}
 	}
 	Console.WriteLine("Максимальное число " + maxNumMass + " минимальное число " + minNumMass);
-	Console.WriteLine(maxNumMass - minNumMass + " Разница между максимальным и минимальным числом");
+	Console.Write(Math.Round(maxNumMass - minNumMass, 2));
+	Console.Write(" Разница между максимальным и минимальным");
 }
 
 
-int[] masik = RndMass();
+double[] masik = RndMassVesh();
 var mass = string.Join(" ", masik);
 Console.WriteLine(mass + " массивчек");
 MaxMin(masik);
 
 
-*/
+
 
 
