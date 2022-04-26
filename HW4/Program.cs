@@ -16,11 +16,11 @@ double[] RndMassVesh()
 	int size = new Random().Next(2, 10);
 	double[] mass = new double[size];
 	Random rand = new Random();
-    double number;
+        double number;
 
 	for (int i = 0; i < size; i ++)
 	{
-        number = rand.NextDouble();
+        	number = rand.NextDouble();
 		mass[i] = Math.Round(number, 2);
 	}
 	return mass;
