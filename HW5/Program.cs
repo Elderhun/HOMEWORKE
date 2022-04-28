@@ -69,7 +69,7 @@ int[] RndMass()
 }
 
 int[] massive = RndMass();
-var str = "[" + string.Join(" ", massive) + "]";
+var str = "[" + string.Join(", ", massive) + "]";
 Console.WriteLine(str);
 
 */
