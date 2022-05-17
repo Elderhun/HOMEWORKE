@@ -80,7 +80,7 @@ for (int j = 0; j < doubleArr.GetLength(1); j++)
         summa += (doubleArr[i,j]);
 
     }
-   Console.Write(Math.Round(summa / doubleArr.GetLength(0),2) + "; ");
+   Console.Write("среднее арефметическое столбца " + (j + 1) + " - " + Math.Round(summa / doubleArr.GetLength(0),2) + "; ");
     
     
 
