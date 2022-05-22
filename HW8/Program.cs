@@ -160,7 +160,7 @@ Console.WriteLine();
 return tdarray;
 }
 
-
+// Это для массива 4 на 4
 
 int [,] Spiralka(int [,] spiro)
 {
