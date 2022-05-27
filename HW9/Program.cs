@@ -32,38 +32,19 @@ Console.WriteLine("Sum first to second nums = {0}", sumNums);
 
 //Задача 67: Напишите программу, которая будет принимать на вход число и возвращать сумму его цифр.
 
-// Максимально тупой вариант))
 
-
-
-Console.Write("Input number ");
-string numKa = Convert.ToString(Console.ReadLine());
-
-int sum = 0;
-
-
-for(int i = 0; i < numKa.Length; i++)
+int SumNum(int number)
 {
-    sum += Convert.ToInt32(numKa[i].ToString());
-}    
 
-Console.WriteLine("Number summ = {0}", sum);
+    if(number==0) return 0;
+    {
+        return number % 10 + SumNum(number/10);
+    }
 
+}
 
-//продублированный вариант из 5 дз.
+Console.Write("Write number ");
+int number = Convert.ToInt32(Console.ReadLine());
+int summa = SumNum(number);
+Console.WriteLine(summa);
 
-
-int SumNum(int num)
-{
-	int kek = 0;
-	while (num > 0)
-	{
-	    kek = kek + num % 10;
-	    num = num / 10;	
-	}
-	return kek;
-}	
-
-int gag = new Random().Next(10, 9999);
-Console.WriteLine(gag + " Your Number ");
-Console.Write(SumNum(gag)+" Number summ");
