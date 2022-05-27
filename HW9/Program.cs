@@ -4,17 +4,17 @@
 
 int SumFnumToSnum(int num1, int num2)
 {
-
     int sum = 0;
-
-    for(int i = num1; i <= num2; i++)
-    {
-        sum += i;
-    }
-
-    return sum;
     
+    if (num1 <= num2)
+    {
+        sum += num1;
+        return num1 + SumFnumToSnum(num1 + 1, num2);
+    }
+    return sum;
 }
+
+
 
 Console.Write("Input first number ");
 int fNum = Convert.ToInt32(Console.ReadLine());
@@ -22,10 +22,10 @@ int fNum = Convert.ToInt32(Console.ReadLine());
 Console.Write("Input second number ");
 int sNum = Convert.ToInt32(Console.ReadLine());
 
+
 int sumNums = SumFnumToSnum(fNum, sNum);
 
 Console.WriteLine("Sum first to second nums = {0}", sumNums);
-
 
 
 
